@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
+import logo from '../assets/logo_lexion.png';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +11,12 @@ export default function Header() {
     <header className="flex justify-between items-center px-6 lg:px-10 h-[80px] bg-[#05070A]/80 backdrop-blur-[10px] border-b border-white/5 z-20 relative">
       {/* Logo */}
       <Link to="/" className="flex items-center text-white">
-        <img src="/logo_lexion.png" alt="Lexion Logo" className="h-[60px] w-auto object-contain" />
+        <img 
+          src={logo} 
+          alt="Lexion Logo" 
+          className="h-[60px] w-auto object-contain"
+          referrerPolicy="no-referrer"
+        />
         <span className="font-['Orbitron'] font-semibold text-[30px] tracking-[0.15em] leading-[40px] flex items-center text-left">
           LEXION
         </span>
