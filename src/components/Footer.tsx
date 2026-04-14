@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex gap-4">
           <span className="hover:text-[#00A3FF] cursor-pointer transition-colors">LinkedIn</span>
           <span className="hover:text-[#00A3FF] cursor-pointer transition-colors">Instagram</span>
-          <span className="hover:text-[#00A3FF] cursor-pointer transition-colors">Twitter</span>
+          <span className="hover:text-[#00A3FF] cursor-pointer transition-colors">X</span>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -33,7 +34,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-[rgba(11,15,25,0.8)] border border-white/10 rounded-xl p-4 backdrop-blur-md hover:border-[#00A3FF] transition-colors"
+            className="bg-[rgba(11,15,25,0.8)] border border-white/10 rounded-xl p-4 backdrop-blur-md hover:border-[#00A3FF] transition-all group"
           >
             <div className="w-8 h-8 bg-[rgba(0,163,255,0.3)] rounded-md mb-3 flex items-center justify-center text-[#00A3FF] font-bold text-[10px]">
               {service.icon}
@@ -43,9 +44,16 @@ export default function Services() {
               {service.title}
             </h3>
             
-            <p className="text-[12px] text-[#94A3B8] leading-[1.4]">
+            <p className="text-[12px] text-[#94A3B8] leading-[1.4] mb-4">
               {service.description}
             </p>
+
+            <Link 
+              to="/servicos" 
+              className="text-[10px] text-[#00A3FF] font-bold uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all"
+            >
+              Saiba Mais <span>&rarr;</span>
+            </Link>
           </motion.div>
         ))}
       </div>

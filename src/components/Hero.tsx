@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export default function Hero() {
@@ -18,17 +19,19 @@ export default function Hero() {
         
         <div className="flex flex-wrap gap-3">
           <a
-            href="#contato"
+            href="https://wa.me/5516997603600"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#00A3FF] text-white px-6 py-3.5 rounded-lg font-bold shadow-[0_4px_20px_rgba(0,163,255,0.3)] hover:bg-[#00A3FF]/90 transition-colors"
           >
             Agendar Consultoria Gratuita
           </a>
-          <a
-            href="#servicos"
+          <Link
+            to="/servicos"
             className="bg-white/5 border border-white/10 text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-colors"
           >
             Ver Serviços
-          </a>
+          </Link>
         </div>
       </motion.div>
     </section>
